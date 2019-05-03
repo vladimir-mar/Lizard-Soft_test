@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lizard-Soft_test</title>
+	<link rel="stylesheet" href="library/arcticmodal/jquery.arcticmodal-0.3.css">
+	<link rel="stylesheet" href="library/arcticmodal/themes/simple.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="pop-up_js" class="seat-pop-up"></div>
+	<div class="search">
+		<input id="search-input_js" class="search__input" type="search" placeholder="Search">
+		<select id="search-select_js" class="search__select">
+			<option selected value="name">name</option>
+			<option value="email">email</option>
+			<option value="phone">phone</option>
+			<option value="company">company</option>
+		</select>
+	</div>
+	<div class="filter">
+		<div class="filter__title">Filter</div>
+		<div class="filter__item">
+			<label>by active:</label>
+			<select id="filter-activ_js">
+				<option selected value="only active">only active</option>
+				<option value="">all</option>
+			</select>
+		</div>
+		<div class="filter__item">
+			<label>by tags:</label>
+			<select id="filter-tags_js">
+			</select>
+		</div>
+	</div>
+	<table id="list-users_js" class="list-users" cellpadding="0" cellspacing="0"></table>
+	<script id="filter-tags_tpl" type="text/x-handlebars-template">
+		<option selected value="">---</option>
+		{{#each this}}
+			<option value="{{this}}">{{this}}</option>
+		{{/each}}
+	</script>
+	<script id="list-users_tpl" type="text/x-handlebars-template">
+		<tr>
+			<th class="list-users__cell list-users__cell_head"></th>
+			<th class="list-users__cell list-users__cell_head">name</th>
+			<th class="list-users__cell list-users__cell_head">email</th>
+			<th class="list-users__cell list-users__cell_head">phone</th>
+			<th class="list-users__cell list-users__cell_head">friends</th>
+			<th class="list-users__cell list-users__cell_head"></th>
+		</tr>
+		{{#each this}}
+			<tr>
+				<td class="list-users__cell">{{num}}</td>
+				<td class="list-users__cell">{{name}}</td>
+				<td class="list-users__cell">{{email}}</td>
+				<td class="list-users__cell">{{phone}}</td>
+				<td class="list-users__cell">{{friends}}</td>
+				<td class="list-users__cell">
+					<span data-id="{{id}}" class="more-info_js list-users__cell__icon-more-info">more</span>
+				</td>
+			</tr>
+		{{/each}}
+	</script>
+	<script id="pop-up_tpl" type="text/x-handlebars-template">
+	    <div class="box-modal" id="exampleModal">
+	        <div class="box-modal_close arcticmodal-close">close</div>
+	        <table class="personal-info" cellpadding="0" cellspacing="0">
+	        	{{#each this}}
+		        	<tr>
+		        		<th class="personal-info__cell personal-info__cell_head">{{title}}</th>
+		        		<td class="personal-info__cell">{{content}}</td>
+		        	</tr>
+	        	{{/each}}
+	        </table>
+	    </div>
+	</script>
+	<script src="library/jquery-3.4.1.min.js"></script>
+	<script src="library/handlebars-v4.1.2.js"></script>
+	<script src="library/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/script.js?2"></script>
+</body>
+</html>

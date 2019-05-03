@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+}
+.search, .filter {
+  text-align: center;
+  margin-top: 20px;
+}
+.search__input, .search__select {
+  font-size: 20px;
+}
+.filter__title, .filter__item {
+  display: inline-block;
+}
+.filter__title {
+  color: #ccc;
+  font-size: 18px;
+}
+.filter__item {
+  margin-left: 10px;
+}
+.list-users {
+  margin: 20px auto;
+  border-width: 1px 0 0 1px;
+  border-color: #000;
+  border-style: inset;
+}
+.list-users__cell {
+  padding: 10px;
+  border-width: 0 1px 1px 0;
+  border-color: #000;
+  border-style: inset;
+  text-align: center;
+}
+.list-users__cell_head {
+  background-color: #ccc;
+}
+.list-users__cell__icon-more-info {
+  background-color: #999;
+  border: 2px solid #999;
+  display: block;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.list-users__cell__icon-more-info:hover {
+  border-color: #000;
+}
+.personal-info {
+  border-width: 1px 0 0 1px;
+  border-color: #000;
+  border-style: inset;
+}
+.personal-info__cell {
+  padding: 10px;
+  border-width: 0 1px 1px 0;
+  border-color: #000;
+  border-style: inset;
+}
+.personal-info__cell_head {
+  background-color: #ccc;
+  text-align: left;
+}
+.seat-pop-up {
+  display: none;
+}
+.box-modal_close {
+  background-color: #999;
+  border: 2px solid #999;
+  padding: 2px 4px;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+.box-modal_close:hover {
+  color: #000;
+  border-color: #000;
+}
